@@ -4,10 +4,10 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
-public class AVLTree_tests
+public class AVLTree_Test
 {
     @Test
-    void testcase1()
+    public void testcase1()
     {
         AVLTree x = null;
         x = new AVLTree();
@@ -15,7 +15,7 @@ public class AVLTree_tests
     }
 
     @Test
-    void testCase2() {
+    public void testCase2() {
         AVLTree x = null;
         x = new AVLTree();
         assertNotNull(x);
@@ -23,7 +23,7 @@ public class AVLTree_tests
     }
 
     @Test
-    void testCase3() {
+    public void testCase3() {
         AVLTree x = null;
         x = new AVLTree();
         AVLTree.Node y = x.new Node(5);
@@ -40,7 +40,7 @@ public class AVLTree_tests
     }
 
     @Test
-    void testCase5() {
+    public void testCase5() {
         AVLTree x = null;
         x = new AVLTree();
         x.insert(10);
@@ -49,7 +49,7 @@ public class AVLTree_tests
     }
 
     @Test
-    void testCase6() {
+    public void testCase6() {
         AVLTree x = null;
         x = new AVLTree();
         x.insert(10);
@@ -58,7 +58,7 @@ public class AVLTree_tests
     }
 
     @Test
-    void testCase7() {
+    public void testCase7() {
         AVLTree x = null;
         x = new AVLTree();
         x.insert(10);
@@ -69,7 +69,7 @@ public class AVLTree_tests
     }
 
     @Test
-    void testCase8() {
+    public void testCase8() {
         AVLTree x = null;
         x = new AVLTree();
         x.insert(10);
@@ -81,7 +81,7 @@ public class AVLTree_tests
     }
 
     @Test
-    void testCase9() {
+    public void testCase9() {
         AVLTree x = null;
         x = new AVLTree();
         x.insert(10);
@@ -91,7 +91,7 @@ public class AVLTree_tests
     }
 
     @Test
-    void testCaseGetBalanceFunction() {
+    public void testCase10() {
         AVLTree x = null;
         x = new AVLTree();
         x.insert(10);
