@@ -34,9 +34,6 @@
 					<execution>
 						<id>avl-tree-report</id>
 						<phase>test</phase>
-						<goals>
-							<goal>report</goal>
-						</goals>
 					</execution>
 				</executions>
             </plugin>
