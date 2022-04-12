@@ -101,5 +101,27 @@ public class AVLTree_Test
         assertEquals(1, x.getBalance(x.find(12)));
     }
 
+    @Test
+    public void testCase11() {
+        AVLTree x = null;
+        x = new AVLTree();
+        x.insert(10);
+        x.insert(12);
+        x.insert(9);
+        AVLTree.Node y = null;
+        y = x.getRoot();
+        assertEquals(10, x.find(10).key);
+    }
+
+    @Test
+    public void testCase12() {
+        AVLTree x = null;
+        x = new AVLTree();
+        x.insert(10);
+        AVLTree.Node y = null;
+        y = x.find(10);
+        assertEquals(10, y.key);
+    }
+
 
 }
