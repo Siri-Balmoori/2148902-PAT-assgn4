@@ -123,5 +123,37 @@ public class AVLTree_Test
         assertEquals(10, y.key);
     }
 
+    @Test
+    public void testCase13() {
+        int[] array = { 10, 20, 30, 40, 50, 25 };
+        AVLTree x = new AVLTree();
+
+        for (int i = 0; i < array.length; i++) {
+            x.insert(array[i]);
+        }
+        assertEquals(x.find(60), null);
+    }
+
+    @Test
+    public void testCase14() {
+        int[] array = { 1000, 2000, 3000, 4000, 5000, 2500 };
+        AVLTree x = new AVLTree();
+
+        for (int i = 0; i < array.length; i++) {
+            x.insert(array[i]);
+        }
+
+        assertEquals(x.height(), 2);
+    }
+
+    @Test
+    public void testCase15() {
+
+        AVLTree x = new AVLTree();
+        x.insert(5);
+
+        assertNotNull(x.find(5));
+    }
+
 
 }
