@@ -1,1 +1,1 @@
-https://app.travis-ci.com/Siri-Balmoori/2148902-PAT-assgn4.svg?branch=main
+[![Build Status](https://app.travis-ci.com/Siri-Balmoori/2148902-PAT-assgn4.svg?branch=main)](https://app.travis-ci.com/Siri-Balmoori/2148902-PAT-assgn4)
