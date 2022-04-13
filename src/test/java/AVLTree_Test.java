@@ -215,5 +215,20 @@ public class AVLTree_Test
         assertEquals(x.getBalance(x.find(60)), 0);
     }
 
+     @Test
+    public  void testCase21() {
+        AVLTree x = new AVLTree();
+        x.insert(1111);
+        x.insert(2222);
+        x.insert(3333);
+        x.insert(4444);
+        x.insert(5555);
+        x.insert(6666);
+        x.insert(7777);
+        x.insert(8888);
+        assertTrue(x.find(1110)==null);
+        assertTrue(x.find(3330)==null);
+    }
+
 
 }
