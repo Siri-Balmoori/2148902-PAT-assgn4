@@ -278,6 +278,49 @@ public class AVLTree_Test
         assertEquals((-1), x.height());
     }
 
+    @Test
+    public void testCase27() {
+        int[] array = { 120, 220, 320, 420, 520, 250 };
+        AVLTree x = new AVLTree();
+
+        for (int i = 0; i < array.length; i++) {
+            x.insert(array[i]);
+        }
+
+        assertEquals(x.getBalance(x.find(30)), 0);
+    }
+
+    @Test
+    public void testCase28() {
+        int[] array = { 9, 19, 29, 39, 49, 24 };
+        AVLTree x = new AVLTree();
+
+        for (int i = 0; i < array.length; i++) {
+            x.insert(array[i]);
+        }
+        assertNotNull(x.find(9));
+
+    }
+
+    @Test
+    public void testCase29() {
+        int[] array = { 100, 200, 300, 400, 500, 250 };
+        AVLTree x = new AVLTree();
+
+        for (int i = 0; i < array.length; i++) {
+            x.insert(array[i]);
+        }
+        assertEquals(x.getRoot(), x.find(300));
+    }
+
+    @Test
+    public void testCase30() {
+
+        AVLTree x = new AVLTree();
+        x.insert(581);
+        assertEquals(x.find(51), null);
+    }
+
 
 
 }
