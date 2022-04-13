@@ -7,21 +7,21 @@ import static org.junit.Assert.assertNull;
 public class AVLTree_Test
 {
    @Test
-    void testCaseEqualsItself() {
+    public void testCaseEqualsItself() {
         AVLTree tree = null;
         tree = new AVLTree();
         assertEquals(tree, tree);
     }
 
     @Test
-    void testCaseDefaultConstructor() {
+    public void testCaseDefaultConstructor() {
         AVLTree tree = null;
         tree = new AVLTree();
         assertNotNull(tree);
     }
 
     @Test
-    void testCaseIntegerConstructor() {
+    public void testCaseIntegerConstructor() {
         AVLTree tree = null;
         tree = new AVLTree();
         AVLTree.Node node = tree.new Node(5);
@@ -29,7 +29,7 @@ public class AVLTree_Test
     }
 
     @Test
-    void testCaseGetFunction() {
+    public void testCaseGetFunction() {
         AVLTree tree = null;
         tree = new AVLTree();
         tree.insert(10);
@@ -38,7 +38,7 @@ public class AVLTree_Test
     }
 
     @Test
-    void testCaseInsertFunction() {
+    public void testCaseInsertFunction() {
         AVLTree tree = null;
         tree = new AVLTree();
         tree.insert(10);
@@ -47,7 +47,7 @@ public class AVLTree_Test
     }
 
     @Test
-    void testCaseLeftFindFunction() {
+    public void testCaseLeftFindFunction() {
         AVLTree tree = null;
         tree = new AVLTree();
         tree.insert(10);
@@ -58,7 +58,7 @@ public class AVLTree_Test
     }
 
     @Test
-    void testCaseRightFindFunction() {
+    public void testCaseRightFindFunction() {
         AVLTree tree = null;
         tree = new AVLTree();
         tree.insert(10);
@@ -70,7 +70,7 @@ public class AVLTree_Test
     }
 
     @Test
-    void testCaseDeleteFunction() {
+    public void testCaseDeleteFunction() {
         AVLTree tree = null;
         tree = new AVLTree();
         tree.insert(10);
@@ -80,7 +80,7 @@ public class AVLTree_Test
     }
 
     @Test
-    void testCaseGetBalanceFunction() {
+    public void testCaseGetBalanceFunction() {
         AVLTree tree = null;
         tree = new AVLTree();
         tree.insert(10);
@@ -91,7 +91,7 @@ public class AVLTree_Test
     }
 
     @Test
-    void testCaseMultipleInsertionFunction() {
+    public void testCaseMultipleInsertionFunction() {
         AVLTree tree = null;
         tree = new AVLTree();
         tree.insert(10);
@@ -103,7 +103,7 @@ public class AVLTree_Test
     }
 
     @Test
-    void testCaseFindFunction() {
+    public void testCaseFindFunction() {
         AVLTree tree = null;
         tree = new AVLTree();
         tree.insert(10);
