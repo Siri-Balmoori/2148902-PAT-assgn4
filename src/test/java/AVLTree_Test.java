@@ -204,7 +204,6 @@ public class AVLTree_Test
 
     @Test
     public void testCase20() {
-        int[] array = { 110, 220, 330, 440, 550, 250 };
         AVLTree x = new AVLTree();
         x.insert(170);
         x.insert(270);
@@ -216,19 +215,32 @@ public class AVLTree_Test
     }
 
      @Test
-    public  void testCase21() {
+    public void testCase21() {
         AVLTree x = new AVLTree();
         x.insert(1111);
+        x.delete(1111);
         x.insert(2222);
         x.insert(3333);
         x.insert(4444);
+        x.delete(4444);
         x.insert(5555);
         x.insert(6666);
         x.insert(7777);
         x.insert(8888);
-        assertTrue(x.find(1110)==null);
-        assertTrue(x.find(3330)==null);
+        assertEquals(x.find(4444),null);
     }
+
+    @Test
+    public void testCase22()  {
+        AVLTree x = new AVLTree();
+        x.insert(43);
+        x.delete(43);
+        x.height();
+        x.insert(46);
+        x.find(43);
+        assertEquals(0, x.height());
+    }
+
 
 
 }
