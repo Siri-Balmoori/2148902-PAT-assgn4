@@ -254,6 +254,30 @@ public class AVLTree_Test
         assertEquals(x.getRoot(), x.find(310));
     }
 
+    @Test
+    public void testCase24()   {
+        AVLTree x = new AVLTree();
+        AVLTree.Node y = x.find((-17));
+        assertNull(y);
+    }
+
+    @Test
+    public void testCase25() {
+        AVLTree x = new AVLTree();
+        x.insert(141);
+        AVLTree.Node y = x.getRoot();
+        assertEquals(141, y.key);
+        assertNotNull(x.find(141));
+    }
+
+    @Test
+    public void testCase26()  {
+        AVLTree x = new AVLTree();
+        x.insert(5);
+        x.delete(5);
+        assertEquals((-1), x.height());
+    }
+
 
 
 }
