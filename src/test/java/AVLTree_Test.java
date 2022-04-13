@@ -361,17 +361,4 @@ public class AVLTree_Test
         x.getBalance(y);
     }
 
-    @Test
-	public void testdelete() {
-
-		AVLTree tree = new AVLTree();
-		tree.delete(5);
-
-		assertEquals(tree.find(5));
-	}
-
-
-
-
-
 }
