@@ -346,6 +346,21 @@ public class AVLTree_Test
         x.getBalance(y);
     }
 
+    @Test
+    public void testCase35() {
+        AVLTree x = new AVLTree();
+        x.insert(120);
+        x.insert(220);
+        x.insert(320);
+        x.insert(420);
+        x.insert(520);
+        x.insert(250);
+        x.delete(120);
+        x.delete(220);
+        AVLTree.Node y=x.getRoot();
+        x.getBalance(y);
+    }
+
 
 
 
