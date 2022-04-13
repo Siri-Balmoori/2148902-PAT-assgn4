@@ -334,6 +334,18 @@ public class AVLTree_Test
         assertNotNull(m);
     }
 
+    @Test
+    public void testTreeBalance() {
+        int[] array = { 1020, 2020, 3020, 4020, 5020, 2050 };
+        AVLTree x = new AVLTree();
+        for (int i = 0; i < array.length; i++) {
+            x.insert(array[i]);
+        }
+        assertEquals(x.getBalance(x.find(160)), 0);
+        AVLTree.Node y = x.getRoot();
+        x.getBalance(y);
+    }
+
 
 
 
