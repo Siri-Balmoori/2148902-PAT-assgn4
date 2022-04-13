@@ -190,5 +190,30 @@ public class AVLTree_Test
         assertEquals(x.height(),2);
     }
 
+    @Test
+    public void testCase19() {
+        AVLTree x = new AVLTree();
+        x.insert(14);
+        x.insert(24);
+        x.insert(34);
+        x.insert(44);
+        x.insert(54);
+        x.delete(34);
+        assertEquals(x.find(33), null);
+    }
+
+    @Test
+    public void testCase20() {
+        int[] array = { 110, 220, 330, 440, 550, 250 };
+        AVLTree x = new AVLTree();
+        x.insert(170);
+        x.insert(270);
+        x.insert(370);
+        x.insert(470);
+        x.insert(570);
+        x.insert(670);
+        assertEquals(x.getBalance(x.find(60)), 0);
+    }
+
 
 }
