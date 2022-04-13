@@ -7,8 +7,7 @@ import static org.junit.Assert.assertNull;
 public class AVLTree_Test
 {
     @Test
-    public void testcase1()
-    {
+    public void testcase1() {
         AVLTree x = null;
         x = new AVLTree();
         assertEquals(x, x);
@@ -34,7 +33,7 @@ public class AVLTree_Test
     public void testcase4() {
 
         AVLTree x = new AVLTree();
-        x.insert(5);
+        x.insert(6);
 
         assertEquals(x.find(10), null);
     }
@@ -48,84 +47,85 @@ public class AVLTree_Test
         assertNotNull(o);
     }
 
+
     @Test
     public void testCase6() {
         AVLTree x = null;
         x = new AVLTree();
-        x.insert(10);
+        x.insert(14);
         AVLTree.Node y = x.getRoot();
-        assertEquals(10, y.key);
+        assertEquals(14, y.key);
     }
 
     @Test
     public void testCase7() {
         AVLTree x = null;
         x = new AVLTree();
-        x.insert(10);
+        x.insert(11);
         x.insert(12);
-        x.insert(9);
+        x.insert(8);
         AVLTree.Node y = x.getRoot();
-        assertEquals(9, y.left.key);
+        assertEquals(8, y.left.key);
     }
 
     @Test
     public void testCase8() {
         AVLTree x = null;
         x = new AVLTree();
-        x.insert(10);
-        x.insert(12);
-        x.insert(9);
+        x.insert(121);
+        x.insert(312);
+        x.insert(88);
         AVLTree.Node y = null;
         y = x.getRoot();
-        assertEquals(12, y.right.key);
+        assertEquals(312, y.right.key);
     }
 
     @Test
     public void testCase9() {
         AVLTree x = null;
         x = new AVLTree();
-        x.insert(10);
-        x.insert(12);
-        x.delete(10);
-        assertNull(x.find(10));
+        x.insert(3);
+        x.insert(7);
+        x.delete(7);
+        assertNull(x.find(7));
     }
 
     @Test
     public void testCase10() {
         AVLTree x = null;
         x = new AVLTree();
-        x.insert(10);
-        x.insert(12);
-        x.insert(9);
+        x.insert(16);
+        x.insert(18);
         x.insert(15);
-        assertEquals(1, x.getBalance(x.find(12)));
+        x.insert(21);
+        assertEquals(1, x.getBalance(x.find(18)));
     }
 
     @Test
     public void testCase11() {
         AVLTree x = null;
         x = new AVLTree();
-        x.insert(10);
-        x.insert(12);
-        x.insert(9);
+        x.insert(101);
+        x.insert(121);
+        x.insert(91);
         AVLTree.Node y = null;
         y = x.getRoot();
-        assertEquals(10, x.find(10).key);
+        assertEquals(101, x.find(101).key);
     }
 
     @Test
     public void testCase12() {
         AVLTree x = null;
         x = new AVLTree();
-        x.insert(10);
+        x.insert(37);
         AVLTree.Node y = null;
-        y = x.find(10);
-        assertEquals(10, y.key);
+        y = x.find(37);
+        assertEquals(37, y.key);
     }
 
     @Test
     public void testCase13() {
-        int[] array = { 10, 20, 30, 40, 50, 25 };
+        int[] array = { 20, 30, 40, 50, 25};
         AVLTree x = new AVLTree();
 
         for (int i = 0; i < array.length; i++) {
@@ -134,9 +134,10 @@ public class AVLTree_Test
         assertEquals(x.find(60), null);
     }
 
+
     @Test
     public void testCase14() {
-        int[] array = { 1000, 2000, 3000, 4000, 5000, 2500 };
+        int[] array = {1000, 2000, 3000, 4000, 5000, 2500};
         AVLTree x = new AVLTree();
 
         for (int i = 0; i < array.length; i++) {
@@ -150,9 +151,9 @@ public class AVLTree_Test
     public void testCase15() {
 
         AVLTree x = new AVLTree();
-        x.insert(5);
+        x.insert(4);
 
-        assertNotNull(x.find(5));
+        assertNotNull(x.find(4));
     }
 
     @Test
@@ -176,7 +177,7 @@ public class AVLTree_Test
         x.insert(350);
         x.insert(450);
         x.insert(750);
-        assertEquals(x.find(400),null);
+        assertEquals(x.find(400), null);
     }
 
     @Test
@@ -187,13 +188,13 @@ public class AVLTree_Test
         x.insert(3220);
         x.insert(4220);
         x.insert(5220);
-        assertEquals(x.height(),2);
+        assertEquals(x.height(), 2);
     }
 
     @Test
     public void testCase19() {
         AVLTree x = new AVLTree();
-        x.insert(14);
+        x.insert(17);
         x.insert(24);
         x.insert(34);
         x.insert(44);
@@ -214,7 +215,7 @@ public class AVLTree_Test
         assertEquals(x.getBalance(x.find(60)), 0);
     }
 
-     @Test
+    @Test
     public void testCase21() {
         AVLTree x = new AVLTree();
         x.insert(1111);
@@ -239,6 +240,18 @@ public class AVLTree_Test
         x.insert(46);
         x.find(43);
         assertEquals(0, x.height());
+    }
+
+    @Test
+    public void testCase23() {
+        AVLTree x = new AVLTree();
+        x.insert(110);
+        x.insert(210);
+        x.insert(310);
+        x.insert(410);
+        x.insert(510);
+        x.insert(225);
+        assertEquals(x.getRoot(), x.find(310));
     }
 
 
