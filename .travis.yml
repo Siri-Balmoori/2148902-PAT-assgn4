@@ -6,10 +6,9 @@ cache:
   directories:
   - $HOME/.m2
 script:
-- ./mvnw clean install
 - ./mvnw evosuite:generate
 - ./mvnw evosuite:export
-- ./mvnw test
+- ./mvnw clean install
 - ./mvnw evosuite:info
 
 after_success:
