@@ -10,6 +10,5 @@ script:
 - ./mvnw evosuite:export
 - ./mvnw clean install
 - ./mvnw evosuite:info
-
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+- bash <(curl -s https://codecov.io/bash)
+- git status
