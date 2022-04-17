@@ -7,7 +7,6 @@
     <groupId>bughunt-asgn</groupId>
     <artifactId>Bughunt4</artifactId>
     <version>1.0-SNAPSHOT</version>
-
     <dependencies>
         <dependency>
             <scope>test</scope>
@@ -68,10 +67,6 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.eluder.coveralls</groupId>
-                <artifactId>coveralls-maven-plugin</artifactId>
             </plugin>
 
             <plugin>
