@@ -7,6 +7,10 @@ cache:
   - $HOME/.m2
 script:
 - ./mvnw clean install
+- ./mvnw evosuite:generate
+- ./mvnw evosuite:export
 - ./mvnw test
+- ./mvnw evosuite:info
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)
