@@ -1,5 +1,5 @@
 language: java
-jdk: openjdk10
+jdk: openjdk1.8
 install: 
 - mvn -N io.takari:maven:wrapper
 cache:
