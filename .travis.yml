@@ -6,9 +6,5 @@ cache:
   directories:
   - $HOME/.m2
 script:
-- ./mvnw evosuite:generate
-- ./mvnw evosuite:export
 - ./mvnw clean install
-- ./mvnw evosuite:info
 - bash <(curl -s https://codecov.io/bash)
-- git status
