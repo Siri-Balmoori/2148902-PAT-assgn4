@@ -7,13 +7,14 @@
     <groupId>bughunt-asgn</groupId>
     <artifactId>Bughunt4</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <dependencies>
+       <dependencies>
         <dependency>
+            <scope>test</scope>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
-            <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.evosuite</groupId>
             <artifactId>evosuite-standalone-runtime</artifactId>
@@ -21,14 +22,42 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
     <pluginRepositories>
         <pluginRepository>
             <id>EvoSuite</id>
             <name>EvoSuite Repository</name>
             <url>http://www.evosuite.org/m2</url>
         </pluginRepository>
-    </pluginRepositories>    
+    </pluginRepositories>
     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.evosuite.plugins</groupId>
+                    <artifactId>evosuite-maven-plugin</artifactId>
+                    <version>1.0.6</version>
+                    <executions>
+                        <execution>
+                            <phase>process-test-classes</phase>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.17</version>
+                    <configuration>
+                        <properties>
+                            <property>
+                                <name>listener</name>
+                                <value>org.evosuite.runtime.InitializingListener</value>
+                            </property>
+                        </properties>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -39,29 +68,10 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.21.0</version>
-                <executions>
-					<execution>
-						<id>avl-tree-report</id>
-						<phase>test</phase>
-					</execution>
-				</executions>
-            </plugin>
-            <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-report-plugin</artifactId>
-        <version>3.0.0-M6</version>
-        <configuration>
-          <myURL>https://app.codecov.io/gh/Siri-Balmoori/assgn4</myURL>
-        </configuration>
-      </plugin>
+
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.6</version>
                 <executions>
                     <execution>
                         <goals>
@@ -69,7 +79,7 @@
                         </goals>
                     </execution>
                     <execution>
-                        <id>avl-tree-report</id>
+                        <id>report</id>
                         <phase>test</phase>
                         <goals>
                             <goal>report</goal>
@@ -77,16 +87,5 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.evosuite.plugins</groupId>
-                <artifactId>evosuite-maven-plugin</artifactId>
-                <version>1.0.6</version>
-                <executions>
-                    <execution>
-                    <phase>process-test-classes</phase>
-                </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
-</project>
